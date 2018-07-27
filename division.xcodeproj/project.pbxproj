@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0717D4210A60040064035E /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D3210A60040064035E /* CalculatorBrain.swift */; };
+		FA0717D5210A60040064035E /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D3210A60040064035E /* CalculatorBrain.swift */; };
+		FA0717D6210A60040064035E /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D3210A60040064035E /* CalculatorBrain.swift */; };
+		FA0717D8210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */; };
+		FA0717D9210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */; };
+		FA0717DA210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */; };
+		FA0717E6210A7D400064035E /* onlineCalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0717DB210A7CC50064035E /* onlineCalculatorTest.swift */; };
 		FACDC176210A56020060C6C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDC175210A56020060C6C1 /* AppDelegate.swift */; };
 		FACDC178210A56020060C6C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDC177210A56020060C6C1 /* ViewController.swift */; };
 		FACDC17B210A56020060C6C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACDC179210A56020060C6C1 /* Main.storyboard */; };
 		FACDC17D210A56060060C6C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACDC17C210A56060060C6C1 /* Assets.xcassets */; };
 		FACDC180210A56060060C6C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACDC17E210A56060060C6C1 /* LaunchScreen.storyboard */; };
-		FACDC18B210A56070060C6C1 /* divisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDC18A210A56070060C6C1 /* divisionTests.swift */; };
 		FACDC196210A56070060C6C1 /* divisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDC195210A56070060C6C1 /* divisionUITests.swift */; };
+		FACDC1A6210A5AB00060C6C1 /* divisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDC18A210A56070060C6C1 /* divisionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0717D2210A60040064035E /* divisionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "divisionTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA0717D3210A60040064035E /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCalculatorBrain.swift; sourceTree = "<group>"; };
+		FA0717DB210A7CC50064035E /* onlineCalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onlineCalculatorTest.swift; sourceTree = "<group>"; };
 		FACDC172210A56020060C6C1 /* division.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = division.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACDC175210A56020060C6C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACDC177210A56020060C6C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +110,13 @@
 			children = (
 				FACDC175210A56020060C6C1 /* AppDelegate.swift */,
 				FACDC177210A56020060C6C1 /* ViewController.swift */,
+				FA0717D3210A60040064035E /* CalculatorBrain.swift */,
+				FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */,
 				FACDC179210A56020060C6C1 /* Main.storyboard */,
 				FACDC17C210A56060060C6C1 /* Assets.xcassets */,
 				FACDC17E210A56060060C6C1 /* LaunchScreen.storyboard */,
 				FACDC181210A56060060C6C1 /* Info.plist */,
+				FA0717D2210A60040064035E /* divisionTests-Bridging-Header.h */,
 			);
 			path = division;
 			sourceTree = "<group>";
@@ -110,6 +124,7 @@
 		FACDC189210A56070060C6C1 /* divisionTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA0717DB210A7CC50064035E /* onlineCalculatorTest.swift */,
 				FACDC18A210A56070060C6C1 /* divisionTests.swift */,
 				FACDC18C210A56070060C6C1 /* Info.plist */,
 			);
@@ -196,6 +211,7 @@
 					};
 					FACDC185210A56070060C6C1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = FACDC171210A56020060C6C1;
 					};
 					FACDC190210A56070060C6C1 = {
@@ -256,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0717D8210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */,
+				FA0717D4210A60040064035E /* CalculatorBrain.swift in Sources */,
 				FACDC178210A56020060C6C1 /* ViewController.swift in Sources */,
 				FACDC176210A56020060C6C1 /* AppDelegate.swift in Sources */,
 			);
@@ -265,7 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACDC18B210A56070060C6C1 /* divisionTests.swift in Sources */,
+				FA0717E6210A7D400064035E /* onlineCalculatorTest.swift in Sources */,
+				FA0717D9210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */,
+				FA0717D5210A60040064035E /* CalculatorBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0717DA210A7C860064035E /* OnlineCalculatorBrain.swift in Sources */,
+				FA0717D6210A60040064035E /* CalculatorBrain.swift in Sources */,
+				FACDC1A6210A5AB00060C6C1 /* divisionTests.swift in Sources */,
 				FACDC196210A56070060C6C1 /* divisionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +490,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H64787TB62;
 				INFOPLIST_FILE = divisionTests/Info.plist;
@@ -477,6 +501,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Yaheard-LLC.divisionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "division/divisionTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/division.app/division";
@@ -488,6 +514,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H64787TB62;
 				INFOPLIST_FILE = divisionTests/Info.plist;
@@ -498,6 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Yaheard-LLC.divisionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "division/divisionTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/division.app/division";
