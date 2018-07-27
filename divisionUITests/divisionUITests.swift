@@ -42,31 +42,35 @@ class divisionUITests: XCTestCase {
     
     func testCalculate20DivideBy10LabelResult() {
         
-        let element = app.otherElements.containing(.image, identifier:"chalkboard").children(matching: .other).element.children(matching: .other).element
+        let element = app.otherElements.containing(.staticText, identifier:"Enter two numbers").children(matching: .other).element.children(matching: .other).element
         element.children(matching: .textField).element(boundBy: 0).tap()
         
         let app2 = app
         let moreKey = app2/*@START_MENU_TOKEN@*/.keys["more"]/*[[".keyboards",".keys[\"more, numbers\"]",".keys[\"more\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+        
         moreKey.tap()
-     
         
         let key = app2/*@START_MENU_TOKEN@*/.keys["2"]/*[[".keyboards.keys[\"2\"]",".keys[\"2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         key.tap()
-
         
         let key2 = app2/*@START_MENU_TOKEN@*/.keys["0"]/*[[".keyboards.keys[\"0\"]",".keys[\"0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
         key2.tap()
-
-        element.children(matching: .textField).element(boundBy: 1).tap()
+        
+        let textField = element.children(matching: .textField).element(boundBy: 1)
+        textField.tap()
+        
+        
         moreKey.tap()
-
         
         let key3 = app2/*@START_MENU_TOKEN@*/.keys["1"]/*[[".keyboards.keys[\"1\"]",".keys[\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
         key3.tap()
-
+       
         key2.tap()
         app.buttons["Calculate"].tap()
         
+        
+       
         XCTAssertTrue(app.staticTexts["2"].exists, "Result should be displaying '2'")
         
         

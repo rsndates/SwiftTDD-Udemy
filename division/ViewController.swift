@@ -13,21 +13,15 @@ class ViewController: UIViewController {
     let calculatorBrain = CalculatorBrain()
     let calculOnline = OnlineCalculatorBrain()
     @IBAction func calculateButton(_ sender: Any) {
-        if div1Textfield.text != nil && div2Textfield.text != nil {
-            if let div1 = Int(div1Textfield.text!){
-                if let div2 = Int(div2Textfield.text!){
-                    calculatorBrain.divideTwoNumbers(dividend: div1, devisor: div2) { (result, error) in
-                        if error == nil {
-                            let numberFormatter = NumberFormatter()
-                            
-                            numberFormatter.numberStyle = .decimal
-                            if let result = result {
-                                self.resultLabel.text = numberFormatter.string(from: NSNumber(floatLiteral: Double(result)))
-                            }
-                        }
-                    }
-                }
-            }
+        guard div1Textfield.text != nil && div2Textfield.text != nil else { return }
+        guard let div1 = Int(div1Textfield.text!), let div2 = Int(div2Textfield.text!) else { return }
+        
+        calculatorBrain.divideTwoNumbers(dividend: div1, devisor: div2) { (result, error) in
+            guard error == nil else { return }
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            guard let result = result else { return }
+            self.resultLabel.text = numberFormatter.string(from: NSNumber(floatLiteral: Double(result)))
         }
     }
     @IBOutlet weak var resultLabel: UILabel!
