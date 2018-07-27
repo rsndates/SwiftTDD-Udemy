@@ -48,7 +48,7 @@ class onlineCalculatorTest: XCTestCase {
                 expectations.fulfill()
             }
         }
-        waitForExpectations(timeout: 6, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
 }

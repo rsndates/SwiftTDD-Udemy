@@ -20,7 +20,7 @@ class OnlineCalculatorBrain: NSObject {
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) -> Void in
             
-            guard error != nil else { return completionHandler(nil, error as NSError?) }
+            guard error == nil else { return completionHandler(nil, error as NSError?) }
             guard let data = data else {
                 let localError = NSError(domain: "No data was found", code: 1, userInfo: nil)
                 return completionHandler(nil, localError)
@@ -32,7 +32,6 @@ class OnlineCalculatorBrain: NSObject {
                 return completionHandler(nil, error)
             }
             return completionHandler(sValue?.floatValue, nil)
-            
         }
         task.resume()
     }
