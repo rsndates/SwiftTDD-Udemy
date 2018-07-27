@@ -19,24 +19,21 @@ class OnlineCalculatorBrain: NSObject {
         let url = retreiveURLForDivision(dividend: dividend, devisor: devisor)
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data:Data?, response:URLResponse?, error:Error?) -> Void in
-            if error == nil {
-                if let data = data {
-                    
-                    let sValue = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-                    let fValue = sValue?.floatValue
-                    if fValue == nil || sValue!.length > 10 {
-                        let error = NSError(domain: "Division by Zero", code: 1, userInfo: nil)
-                        return completionHandler(nil, error)
-                    }
-                    return completionHandler(sValue?.floatValue, nil)
-                }
+            
+            guard error != nil else { return completionHandler(nil, error as NSError?) }
+            guard let data = data else {
                 let localError = NSError(domain: "No data was found", code: 1, userInfo: nil)
                 return completionHandler(nil, localError)
-                }else {
-                
-                return completionHandler(nil, error as NSError?)
-                }
             }
+            let sValue = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+            let fValue = sValue?.floatValue
+            if fValue == nil || sValue!.length > 10 {
+                let error = NSError(domain: "Division by Zero", code: 1, userInfo: nil)
+                return completionHandler(nil, error)
+            }
+            return completionHandler(sValue?.floatValue, nil)
+            
+        }
         task.resume()
     }
 }
