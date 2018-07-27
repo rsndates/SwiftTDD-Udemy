@@ -3,14 +3,14 @@
 //  division
 //
 //  Created by Robert Dates on 7/26/18.
-//  Copyright © 2018 Yaheard, LLC. All rights reserved.
+//  Copyright © 2018 Robert Dates. All rights reserved.
 //
 
 import UIKit
 
 class OnlineCalculatorBrain: NSObject {
 
-    
+    //MARK: methods
     func retreiveURLForDivision(dividend: Int, devisor: Int) -> URL {
         return URL(string: "https://www.calcatraz.com/calculator/api?c=\(dividend)%2F\(devisor)")!
     }

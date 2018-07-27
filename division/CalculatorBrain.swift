@@ -3,13 +3,14 @@
 //  division
 //
 //  Created by Robert Dates on 7/26/18.
-//  Copyright © 2018 Yaheard, LLC. All rights reserved.
+//  Copyright © 2018 Robert Dates. All rights reserved.
 //
 
 import UIKit
 
 class CalculatorBrain: NSObject {
     
+    //MARK: Methods
     func divideTwoNumbers(dividend: Int, devisor: Int, completion: ((_ result:Float?, _ error:NSError?) -> Void)) {
         Thread.sleep(forTimeInterval: 1)
         guard devisor != 0 else {

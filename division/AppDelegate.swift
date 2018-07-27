@@ -3,7 +3,7 @@
 //  division
 //
 //  Created by Robert Dates on 7/26/18.
-//  Copyright © 2018 Yaheard, LLC. All rights reserved.
+//  Copyright © 2018 Robert Dates. All rights reserved.
 //
 
 import UIKit
