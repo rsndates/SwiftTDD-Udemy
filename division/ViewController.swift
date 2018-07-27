@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //MARK: IBOutlets
     let calculatorBrain = CalculatorBrain()
     let calculOnline = OnlineCalculatorBrain()
     @IBAction func calculateButton(_ sender: Any) {
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var div2Textfield: UITextField!
     @IBOutlet weak var div1Textfield: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
