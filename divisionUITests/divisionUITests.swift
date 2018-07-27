@@ -3,7 +3,7 @@
 //  divisionUITests
 //
 //  Created by Robert Dates on 7/26/18.
-//  Copyright © 2018 Yaheard, LLC. All rights reserved.
+//  Copyright © 2018 Robert Dates. All rights reserved.
 //
 
 import XCTest
@@ -23,12 +23,12 @@ class divisionUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testMainScreen(){
+    private func testMainScreen(){
         let labelText = app.staticTexts["Enter two numbers"]
         XCTAssertTrue(labelText.exists, "Should be in the main screen")
     }
     
-    func testCalculate10DivideBy2LabelResult(){
+    private func testCalculate10DivideBy2LabelResult(){
         let div1 = app.textFields.element(boundBy: 0)
         let div2 = app.textFields.element(boundBy: 1)
         div1.tap()
@@ -40,7 +40,7 @@ class divisionUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["5"].exists, "Result should be displaying '5'")
     }
     
-    func testCalculate20DivideBy10LabelResult() {
+    private func testCalculate20DivideBy10LabelResult() {
         
         let element = app.otherElements.containing(.staticText, identifier:"Enter two numbers").children(matching: .other).element.children(matching: .other).element
         element.children(matching: .textField).element(boundBy: 0).tap()

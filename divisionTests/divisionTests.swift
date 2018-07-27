@@ -3,7 +3,7 @@
 //  divisionTests
 //
 //  Created by Robert Dates on 7/26/18.
-//  Copyright © 2018 Yaheard, LLC. All rights reserved.
+//  Copyright © 2018 Robert Dates. All rights reserved.
 //
 
 import XCTest
@@ -28,14 +28,14 @@ class divisionTests: XCTestCase {
         }
     }
     
-    func test10DivideBy0MustBeNil() {
+    private func test10DivideBy0MustBeNil() {
         calculatorBrain.divideTwoNumbers(dividend: 10, devisor:0) { (result,error) -> Void in
             XCTAssertNil(result, "Result must be nil")
             XCTAssert(error?.domain == "Error dividing by zero", "Error message should be 'Error dividing by zero'")
         }
     }
     
-    func testTestDivisionTime() {
+    private func testTestDivisionTime() {
         measure {
             self.calculatorBrain.divideTwoNumbers(dividend: 10, devisor: 2, completion: { (result, error) in
                 

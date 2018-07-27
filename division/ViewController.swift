@@ -11,8 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     //MARK: IBOutlets
-    let calculatorBrain = CalculatorBrain()
-    let calculOnline = OnlineCalculatorBrain()
+    public let calculatorBrain = CalculatorBrain()
     @IBAction func calculateButton(_ sender: Any) {
         guard div1Textfield.text != nil && div2Textfield.text != nil else { return }
         guard let div1 = Int(div1Textfield.text!), let div2 = Int(div2Textfield.text!) else { return }
