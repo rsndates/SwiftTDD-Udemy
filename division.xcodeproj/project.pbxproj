@@ -85,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAACD276210B75A700675259 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACDC177210A56020060C6C1 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAACD277210B75B800675259 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */,
+				FA0717D3210A60040064035E /* CalculatorBrain.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
 		FACDC169210A56020060C6C1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				FACDC175210A56020060C6C1 /* AppDelegate.swift */,
-				FACDC177210A56020060C6C1 /* ViewController.swift */,
-				FA0717D3210A60040064035E /* CalculatorBrain.swift */,
-				FA0717D7210A7C860064035E /* OnlineCalculatorBrain.swift */,
+				FAACD276210B75A700675259 /* Controllers */,
+				FAACD277210B75B800675259 /* HelperClasses */,
 				FACDC179210A56020060C6C1 /* Main.storyboard */,
 				FACDC17C210A56060060C6C1 /* Assets.xcassets */,
 				FACDC17E210A56060060C6C1 /* LaunchScreen.storyboard */,
