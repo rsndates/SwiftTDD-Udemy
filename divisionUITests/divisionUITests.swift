@@ -11,7 +11,6 @@ import XCTest
 class divisionUITests: XCTestCase {
     var app = XCUIApplication()
     var device = XCUIDevice()
-    var element = XCUIElement.initialize()
     
     override func setUp() {
         super.setUp()

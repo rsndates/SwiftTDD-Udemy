@@ -20,13 +20,13 @@ class onlineCalculatorTest: XCTestCase {
     }
     
     func testRetreiveURLFor10DivideBy2() {
-        let url = NSURL(string: "https://www.calcatraz.com/calculator/api?c=10%2F2")
+        let url = URL(string: "https://www.calcatraz.com/calculator/api?c=10%2F2")
         let response = onlineCalcBrain.retreiveURLForDivision(dividend: 10, devisor: 2)
         XCTAssert(url == response, "URL must be equals to 'https://www.calcatraz.com/calculator/api?c=10%2F2'")
     }
     
     func testRetreiveURLFor10DivideBy2ShouldFail() {
-        let url = NSURL(string: "https://www.calcatraz.com/calculator/api?c=10%2F2")
+        let url = URL(string: "https://www.calcatraz.com/calculator/api?c=10%2F2")
         let response = onlineCalcBrain.retreiveURLForDivision(dividend: 20, devisor: 2)
         XCTAssert(url != response, "URL must not equal to 'https://www.calcatraz.com/calculator/api?c=10%2F2'")
     }
